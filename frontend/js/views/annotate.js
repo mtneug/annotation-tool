@@ -101,7 +101,8 @@ define(["jquery",
                 "click #insert": "insert",
                 "keydown #new-annotation": "onFocusIn",
                 "focusout #new-annotation": "onFocusOut",
-                "click #label-tabs-buttons button": "showTab",
+                // TODO This change doesn't even seem to be needed
+                "click #label-tabs-buttons a": "showTab",
                 "click #editSwitch": "onSwitchEditModus"
             },
 
@@ -197,7 +198,7 @@ define(["jquery",
                 }, this);
 
                 this.tabsContainerElement.find("div.tab-pane:first-child").addClass("active");
-                this.tabsButtonsElement.find("button:first-child").parent().first().addClass("active");
+                this.tabsButtonsElement.find("a:first-child").parent().first().addClass("active");
             },
 
             /**
@@ -358,7 +359,8 @@ define(["jquery",
 
                 if (status) {
                     this.showTab({
-                        currentTarget: this.categoriesTabs[this.DEFAULT_TAB_ON_EDIT].titleLink.find("button")[0]
+                        // TODO This change doesn't even seem to be needed
+                        currentTarget: this.categoriesTabs[this.DEFAULT_TAB_ON_EDIT].titleLink.find("a")[0]
                     });
                 }
             },
