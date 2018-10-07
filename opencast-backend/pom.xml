@@ -20,7 +20,6 @@
     <module>annotation-api</module>
     <module>annotation-impl</module>
     <module>annotation-tool</module>
-    <module>karaf-feature</module>
   </modules>
 
   <dependencyManagement>
